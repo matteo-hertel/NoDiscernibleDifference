@@ -1,6 +1,7 @@
 body {
   background: #eee url("../img/bg.jpg") no-repeat top;
   background-size:cover;
+  height:100vh;
 }
 
 /* DECLARE ME A FONT FAIR COMPUTER */
@@ -32,3 +33,8 @@ body {
   .content {
 	margin-top:20%;
  }
+
+ .image {
+  margin-left:auto;
+  margin-right:auto;
+  }
