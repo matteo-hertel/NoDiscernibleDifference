@@ -14,7 +14,7 @@ var contentBlock = $('#content-block');
 */
 var reasonsOmgReasons = [
 	["Okay so for one...",1,"","SSDs can read and write asynchronously which is already an advantage over HDD.","But it depends on the wurrrkflow."],
-	["So halp me god I will scream.",3,"http://www.youtube.com/watch?v=j84eEjP-RL4","This is not negotiable! An SSD reduces literally all latency of a computer.","SSDs are expensiveeeeeeee, A new computer will be faster."],
+	["So halp me god I will scream.",3,"https://www.youtube.com/embed/j84eEjP-RL4","This is not negotiable! An SSD reduces literally all latency of a computer.","SSDs are expensiveeeeeeee. A new computer will be faster."],
 	["ORRRRRRRR...",2,"ssdprice.png","You could use one of the many extremely cheap, highly reliable boot drives to cure all problems quickly and move on with your life.","But I have ten years of  experi..."],
 	["Yeah ok...",1,"","Have fun with that."]
 ];
@@ -50,7 +50,7 @@ function processText(reason, contentBlock){
 			var text = buildNode("<h3/>",{"class":"text-center","text":reason[3]});
 		}
 		if(undefined != reason[4]) {
-			var button = buildNode("<a/>",{"class":"btn btn-default next-button","text":reason[4]});
+			var button = buildNode("<p/>",{"class":"text-center"}).append(buildNode("<a/>",{"class":"btn btn-default next-button","text":reason[4]}));
 		}
 		contentBlock.append(
 			title,
@@ -73,7 +73,7 @@ function processImageText(reason, contentBlock){
 		var text = buildNode("<h3/>",{"class":"text-center","text":reason[3]});
 	}
 	if(undefined != reason[4]) {
-		var button = buildNode("<a/>",{"class":"btn btn-default next-button","text":reason[4]});
+		var button = buildNode("<p/>",{"class":"text-center"}).append(buildNode("<a/>",{"class":"btn btn-default next-button","text":reason[4]}));
 	}
 	contentBlock.append(
 		title,
@@ -88,7 +88,7 @@ function processImageText(reason, contentBlock){
 function processYouTubeText(reason, contentBlock){
 
 	if(undefined != reason[0]) {
-		var title = buildNode("<h3/>",{"class":"title","text":reason[0]});
+		var title = buildNode("<h3/>",{"class":"title text-center","text":reason[0]});
 	}
 	if(undefined != reason[2]) {
 		var youtube = buildNode("<div/>",{"class":"embed-responsive embed-responsive-16by9"}).append(
@@ -98,7 +98,7 @@ function processYouTubeText(reason, contentBlock){
 		var text = buildNode("<h3/>",{"class":"text-center","text":reason[3]});
 	}
 	if(undefined != reason[4]) {
-		var button = buildNode("<a/>",{"class":"btn btn-default next-button","text":reason[4]});
+		var button = buildNode("<p/>",{"class":"text-center"}).append(buildNode("<a/>",{"class":"btn btn-default next-button","text":reason[4]}));
 	}
 	contentBlock.append(
 		title,
