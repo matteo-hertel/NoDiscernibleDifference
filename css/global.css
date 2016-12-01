@@ -1,7 +1,5 @@
 body {
-  background: #eee url("../img/bg.jpg") no-repeat top;
-  background-size:cover;
-  height:100vh;
+  background: #eee url("../img/bg2.png") repeat top;
 }
 
 /* DECLARE ME A FONT FAIR COMPUTER */
